@@ -1,0 +1,26 @@
+<h1>COUNTxd</h1>
+
+<form>
+  <input type="button" value="about" onclick="window.location.href='{% url 'about'%}'" />
+</form>
+
+<a href="{% url 'home'%}"> HOME </a>
+<form>
+  <input type="button" value="HOME" onclick="window.location.href='{% url 'home'%}'" />
+</form>
+
+
+
+<h2>number of words in your text are: {{ dic1.wordcount }}</h2>
+<h2>the words you entered are:</h2>
+{{ dic1.entry }}
+
+<h3>analysis of words:</h3>
+
+<h1>
+{% for word, x in sorted_dic %}
+{{word}} : {{x}}
+<br></br>
+
+{% endfor %}
+</h1>
